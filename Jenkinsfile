@@ -11,6 +11,7 @@ pipeline {
       steps {
         echo 'Run QA Build by pulling git code'
         git(url: 'https://github.com/Srividya-Ravichandran26/Salesforce', branch: 'master', poll: true)
+        bat 'mvn test'
       }
     }
 
